@@ -1,8 +1,6 @@
-### # Siga os passos abaixo para instalar os pacotes e/ou dependências necessários(as) para utilizar a API
+# Siga os passos abaixo para instalar os pacotes e/ou dependências necessários(as) para utilizar a API
 
-```bash
-cd nest-graphql-prisma-api
-```
+Ao entrar na pasta do projeto execute os comandos abaixo:
 
 ```bash
 npm install
@@ -11,6 +9,10 @@ npm install
 ```bash
 npm run start:dev
 ```
+
+## Utilizando o playground do GraphQL para teste das rotas
+
+<http://localhost:3000/graphql/>
 
 ### Criar post
 

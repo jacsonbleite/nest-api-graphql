@@ -16,4 +16,28 @@ model Post {
   content   String
   published Boolean  @default(false)
   createdAt DateTime @default(now())
+
+  post_user PostUser[]
+  @@map(name: "post")
+}
+
+model User {
+  id              Int     @id @default(autoincrement())
+  email           String  @unique
+  profile_picture String?
+  name            String?
+  password        String?
+
+  post_user PostUser[]
+  @@map(name: "user")
+}
+
+model PostUser {
+  post_id Int
+  post    Post @relation(fields: [post_id], references: [id])
+  user_id Int
+  user    User @relation(fields: [user_id], references: [id])
+
+  @@id([post_id, user_id])
+  @@map(name: "post_user")
 }
